@@ -1,6 +1,6 @@
-    @csrf
+@csrf
 
-    <strong>Title: <x-text-input type="text" name="titel" field="titel" placeholder="Title..." class="w-full border-black" autocomplete="off" :value="$artikel->titel"></x-text-input> </strong> <br> <br>
+<strong>Title: <x-text-input type="text" name="titel" field="titel" placeholder="Title..." class="w-full border-black" autocomplete="off" :value="$artikel->titel"></x-text-input> </strong> <br> <br>
     @error('title')
     <p class="text-red-500 -mt-6">{{ $message }}</p>
     @enderror
@@ -35,6 +35,5 @@
     </strong> <br> <br>
 
 
-    <button type="submit" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Add news</button>
-    <a href="{{ route('artikels.index', $artikel->id)  }}" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Back</a>
+
 
