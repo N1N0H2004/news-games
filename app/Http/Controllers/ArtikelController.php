@@ -41,6 +41,9 @@ class ArtikelController extends Controller
             'categorie_id' =>  'required',
         ]);
 
+
+
+
         Artikel::create([
             'titel' => $request->titel,
             'inhoud' => $request->inhoud,

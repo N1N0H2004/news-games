@@ -38,6 +38,9 @@ class GameController extends Controller
             'tag_id' => 'required',
         ]);
 
+
+
+
         Game::create([
             'naam' => $request->naam,
             'beschrijving' => $request->beschrijving,

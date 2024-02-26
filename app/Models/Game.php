@@ -21,4 +21,22 @@ class Game extends Model
     {
         return $this->belongsTo(Tag::class);
     }
+
+
+    public function addImages(array $images)
+    {
+        $existingImages = $this->foto ? explode('|', $this->foto) : [];
+        $images = array_merge($existingImages, $images);
+        $this->update(['foto' => implode('|', $images)]);
+    }
+
+    /**
+     * Retrieve multiple images associated with the collection.
+     *
+     * @return array
+     */
+    public function getImages()
+    {
+        return !empty($this->foto) ? explode('|', $this->foto) : [];
+    }
 }
