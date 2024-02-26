@@ -23,17 +23,18 @@ class GameController extends Controller
     public function create(Game $game)
     {
         $games = Game::all();
+        $tags = Tag::all();
 
-        return view('games.create', compact('game', 'games'));
+        return view('games.create', compact('game', 'games', 'tags'));
     }
 
     public function store(Request $request)
     {
 
         $request->validate([
-            'naam' => 'naam',
-            'beschrijving' => 'beschrijving',
-            'foto' => 'foto',
+            'naam' => 'required',
+            'beschrijving' => 'required',
+            'foto' => 'required',
             'tag_id' => 'required',
         ]);
 
@@ -56,6 +57,41 @@ class GameController extends Controller
         } catch (\Exception $e) {
             return redirect()->back()->with('warning', 'An error occurred while deleting the news.');
         }
+    }
+
+
+    public function edit(Game $game)
+    {
+        $games = Game::all();
+        $tags = Tag::all();
+
+        return view('games.edit', compact('game', 'games', 'tags'));
+    }
+
+    public function update(Request $request, Game $game)
+    {
+        $request->validate([
+            'naam' => 'required',
+            'beschrijving' => 'required',
+            'foto' => 'required',
+            'tag_id' => 'required',
+        ]);
+
+        $game->update([
+            'naam' => $request->naam,
+            'beschrijving' => $request->beschrijving,
+            'foto' => $request->foto,
+            'tag_id' => $request->tag_id,
+        ]);
+
+        return redirect()->route('games.index')->with('success', 'Game created successfully.');
+    }
+
+
+    public function show(Game $game)
+    {
+        return view('games.show', compact('game'));
+
     }
 
 }
