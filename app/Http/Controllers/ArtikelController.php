@@ -20,10 +20,6 @@ class ArtikelController extends Controller
         return view('artikels.index', compact('artikels'));
     }
 
-    public function show(Artikel $artikel)
-    {
-
-    }
 
     public function create(Artikel $artikel)
     {

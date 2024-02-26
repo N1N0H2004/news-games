@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\CategorieController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +34,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource("artikels", ArtikelController::class);
+Route::resource("tags", tagController::class);
+Route::resource("games", GameController::class);
+Route::resource("categories", CategorieController::class);
 
 
 require __DIR__.'/auth.php';
