@@ -15,25 +15,25 @@ class PhotoSeeder extends Seeder
     {
         $photos = [
             ['naam' => 'Fortnite-logo',
-                'foto' => '/images/fortnite_logo.jpg',
+                'foto' => '/photos/fortnite_logo.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
 
             ['naam' => 'Call Of Duty - Modern Warfare-logo',
-                'foto' => '/images/cod_logo.jpg',
+                'foto' => '/photos/cod_logo.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             ['naam' => 'Minecraft-logo',
-                'foto' => '/images/minecraft_logo.jpg',
+                'foto' => '/photos/minecraft_logo.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
 
             ['naam' => 'Monopoly-logo',
-                'foto' => '/images/monopoly_logo.jpg',
+                'foto' => '/photos/monopoly_logo.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

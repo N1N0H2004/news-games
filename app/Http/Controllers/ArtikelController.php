@@ -7,6 +7,7 @@ use App\Models\Artikel;
 use App\Models\Tag;
 use App\Models\Categorie;
 use App\Models\Game;
+use App\Models\Photo;
 
 
 use Illuminate\Http\Request;
@@ -26,8 +27,9 @@ class ArtikelController extends Controller
         $tags = Tag::all();
         $games = Game::all();
         $categories = Categorie::all();
+        $photos = Photo::all();
 
-        return view('artikels.create', compact('artikel', 'tags', 'games', 'categories'));
+        return view('artikels.create', compact('artikel', 'tags', 'games', 'categories', 'photos'));
     }
 
     public function store(Request $request)

@@ -19,6 +19,8 @@
                         <div class="justify-between items-center">
                             <div class="relative">
                                 <img src="{{ $artikel->game->foto }}" alt="" class="rounded-xl w-96 h-96">
+{{--                                <img src="{{ $artikel->photo->foto }}" alt="" class="rounded-xl w-96 h-96">--}}
+
                                 <strong class="bg-gray-500 bg-opacity-70 pt-0.5 text-white rounded-b-xl absolute bottom-0 left-0 right-0 top-80 text-center"> {{ $artikel->titel }} </strong>
                             </div>
 

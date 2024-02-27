@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('tag_id')->constrained('tags');
             $table->foreignId('categorie_id')->constrained('categories');
             $table->foreignId('game_id')->constrained('games');
+            $table->foreignId('photo_id')->constrained('photos');
             $table->timestamps();
         });
     }

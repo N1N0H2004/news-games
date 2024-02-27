@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TagSeeder::class);
         $this->call(CategorieSeeder::class);
         $this->call(GameSeeder::class);
-        $this->call(ArtikelSeeder::class);
         $this->call(PhotoSeeder::class);
+        $this->call(ArtikelSeeder::class);
 
         $ninoh = User::factory()->create([
             'name' => 'Ninoh van Dijke',

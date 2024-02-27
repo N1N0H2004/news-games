@@ -34,6 +34,13 @@
         </select>
     </strong> <br> <br>
 
-
+    <strong>Photo:
+        <select name="photo_id" class="w-full rounded" autocomplete="off">
+            <option value="">Select a Photo</option>
+            @foreach($photos as $photo)
+                <option value="{{ $photo->id }}" {{ $artikel->photo_id == $photo->id ? 'selected' : '' }}>{{ $photo->foto }}</option>
+            @endforeach
+        </select>
+    </strong> <br> <br>
 
 
