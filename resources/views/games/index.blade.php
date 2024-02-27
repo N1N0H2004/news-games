@@ -17,17 +17,19 @@
                 @forelse($games as $game)
                     <div class=" p-4 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                         <div class=" justify-between items-center">
-
-                            <p><img class="rounded-xl w-60" src={{ $game->foto }} alt=""></p>
-                            <strong class="my-4">Game naam: </strong>{{ $game->naam }}
+                            <div class="flex items-start">
+                                <img class="rounded-xl w-60" src={{ $game->foto }} alt="">
+                                    <div class="ml-4">
+                                    <strong class="my-4">Game naam: </strong>{{ $game->naam }}
 <br><br>
-                            <div class="w-52 flex">
-                                <a href="{{ route('games.edit', $game->id)  }}" class="w-auto h-8 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Edit</a>
-                                <a href="{{ route('games.show', $game->id)  }}" class="w-auto h-8 ml-2 mr-2 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-orange-500 hover:border-orange-600 hover:bg-orange-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Show</a>
-
-                                {{-- DELETE BUTTON --}}
-                                <button type="button" onclick="deleteOpenConfirmationPopup('{{ $game->id }}')" class="w-auto h-8 mr-2 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Delete</button>
+                                        <div class="w-52 flex">
+                                            <a href="{{ route('games.edit', $game->id)  }}" class="w-auto h-8 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Edit</a>
+                                            <a href="{{ route('games.show', $game->id)  }}" class="w-auto h-8 ml-2 mr-2 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-orange-500 hover:border-orange-600 hover:bg-orange-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Show</a>
+                                            <button type="button" onclick="deleteOpenConfirmationPopup('{{ $game->id }}')" class="w-auto h-8 mr-2 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Delete</button>
+                                        </div>
+                                    </div>
                             </div>
+                            
                             <div id="confirmationPopup-{{ $game->id }}" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center" style="display: none;">
                                 <div class="bg-white p-8 rounded-md shadow-md">
                                     <div class="text-center p-5 flex-auto justify-center">
@@ -50,11 +52,9 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- DELETE BUTTON --}}
                         </div>
 
                         <div id="confirmationPopup-{{ $game->id }}" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center" style="display: none;">
-                            <!-- Confirmation Popup Content -->
                         </div>
                     </div>
                 @empty
