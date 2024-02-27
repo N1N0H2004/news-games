@@ -51,6 +51,36 @@ class GameController extends Controller
     }
 
 
+
+//    public function store(Request $request)
+//    {
+//        $request->validate([
+//            'naam' => 'required',
+//            'beschrijving' => 'required',
+//            'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+//            'tag_id' => 'required',
+//        ]);
+//
+//        $fotoNaam = time() . '.' . $request->foto->extension();
+//        $request->foto->move(public_path('images'), $fotoNaam);
+//        $fotoPad = '/images/' . $fotoNaam;
+//
+//        Game::create([
+//            'naam' => $request->naam,
+//            'beschrijving' => $request->beschrijving,
+//            'foto' => $fotoPad,
+//            'tag_id' => $request->tag_id,
+//        ]);
+//
+//        return redirect()->route('games.index')->with('success', 'Game created successfully.');
+//    }
+
+
+
+
+
+
+
     public function destroy(Game $game)
     {
         try {

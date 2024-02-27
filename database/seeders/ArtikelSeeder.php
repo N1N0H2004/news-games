@@ -35,7 +35,7 @@ class ArtikelSeeder extends Seeder
             ],
 
             [
-                'titel' => 'Minecraft',
+                'titel' => 'Minecraft has changed his whole game | New Features',
                 'inhoud' => 'Dit is de inhoud over een artikel over Minecraft',
                 'tag_id' => 3,
                 'categorie_id' => 3,

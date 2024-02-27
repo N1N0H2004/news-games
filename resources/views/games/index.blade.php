@@ -29,7 +29,7 @@
                                         </div>
                                     </div>
                             </div>
-                            
+
                             <div id="confirmationPopup-{{ $game->id }}" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center" style="display: none;">
                                 <div class="bg-white p-8 rounded-md shadow-md">
                                     <div class="text-center p-5 flex-auto justify-center">

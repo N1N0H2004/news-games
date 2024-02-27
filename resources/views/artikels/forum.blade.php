@@ -5,7 +5,7 @@
     <p class="text-red-500 -mt-6">{{ $message }}</p>
     @enderror
 
-    <strong>Description:  <x-text-input type="text" name="inhoud" field="inhoud" placeholder="Description..." class="w-full border-black" autocomplete="off" :value="$artikel->inhoud"></x-text-input> </strong> <br> <br>
+    <strong>Description:  <textarea type="text" name="inhoud" field="inhoud" placeholder="Description..." class="w-full border-black" autocomplete="off" :value="$artikel->inhoud"></textarea> </strong> <br> <br>
 
     <strong>Device:
         <select name="tag_id" class="w-full rounded" autocomplete="off">
