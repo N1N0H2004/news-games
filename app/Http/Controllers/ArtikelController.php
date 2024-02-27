@@ -95,5 +95,9 @@ class ArtikelController extends Controller
         return redirect()->route('artikels.index')->with('success', 'Event created successfully.');
     }
 
+    public function show(Artikel $artikel)
+    {
 
+        return view('artikels.show', compact('artikel'));
+    }
 }

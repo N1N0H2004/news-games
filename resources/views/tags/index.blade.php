@@ -11,7 +11,7 @@
                 <a href="{{ route('tags.create') }}" class="w-auto h-10 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Create tags</a>
             </div>
 
-            <div class="grid gap-6">
+            <div class="grid grid-cols-2 gap-6">
                 @forelse($tags as $tag)
                     <div class=" p-4 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                         <div class="justify-between items-center">

@@ -11,11 +11,11 @@
             <div class="my-6 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
 
                 <div class="text">
-                    <p><img class="rounded-xl w-60" src="/Images/Car.png" alt=""></p>
-                    <p><strong>Name: </strong> {{ $game->naam }}</p>
-                    <p><strong>Description: </strong> {{ $game->beschrijving }}</p>
-                    <p><strong>foto: </strong> {{ $game->foto }}</p>
-                    <p><strong>Description: </strong> {{ $game->tag->naam }}</p>
+                    <p><img class="rounded-xl w-60" src={{ $game->foto }} alt=""></p>
+
+                    <p><strong>Name: </strong> {{ $game->naam }} </p>
+                    <p><strong>Description: </strong> {{ $game->beschrijving }} </p>
+                    <p><strong>Device: </strong> {{ $game->tag->naam }} </p>
 
 
                     <br>

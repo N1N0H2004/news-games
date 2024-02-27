@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-sans font-bold text-xl">
-            {{ __('Locations') }}
+            {{ __('Games') }}
         </h2>
     </x-slot>
 
@@ -13,11 +13,12 @@
 
 
 
-            <div class="grid gap-6">
+            <div class="grid grid-cols-2 gap-6">
                 @forelse($games as $game)
                     <div class=" p-4 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                         <div class=" justify-between items-center">
 
+                            <p><img class="rounded-xl w-60" src={{ $game->foto }} alt=""></p>
                             <strong class="my-4">Game naam: </strong>{{ $game->naam }}
 <br><br>
                             <div class="w-52 flex">

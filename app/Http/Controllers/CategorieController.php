@@ -38,40 +38,40 @@ class CategorieController extends Controller
             'naam' => $request->naam,
         ]);
 
-        return redirect()->route('tags.index')->with('success', 'Event created successfully.');
+        return redirect()->route('categories.index')->with('success', 'Event created successfully.');
     }
 
 
 
-    public function destroy(Categorie $categories)
+    public function destroy(Categorie $categorie)
     {
         try {
-            $tag->delete();
-            return redirect()->route('tags.index')->with('warning', 'Tags delete successfully!');
+            $categorie->delete();
+            return redirect()->route('categories.index')->with('warning', 'Categories delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the news.');
+            return redirect()->back()->with('warning', 'An error occurred while deleting the categories.');
         }
     }
 
 
-    public function edit(Categorie $categories)
+    public function edit(Categorie $categorie)
     {
-        $tags = Tag::all();
+        $categories = Categorie::all();
 
-        return view('tags.edit', compact('tag', 'tags'));
+        return view('categories.edit', compact('categorie', 'categories'));
     }
 
-    public function update(Request $request, Categorie $categories)
+    public function update(Request $request, Categorie $categorie)
     {
         $request->validate([
             'naam' => 'required',
         ]);
 
-        $tag->update([
+        $categorie->update([
             'naam' => $request->naam,
         ]);
 
-        return redirect()->route('tags.index')->with('success', 'Event created successfully.');
+        return redirect()->route('categories.index')->with('success', 'Categorie created successfully.');
     }
 
 }
