@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-sans font-bold text-xl">
-            {{ __('Create News') }}
+            {{ __('Create Article') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -11,7 +11,7 @@
                 <form action="{{ route('artikels.store') }}" method="post">
                     @include('artikels.forum')
 
-                    <button type="submit" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Add news</button>
+                    <button type="submit" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Add articles</button>
                     <a href="{{ route('artikels.index', $artikel->id)  }}" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Back</a>
                 </form>
 

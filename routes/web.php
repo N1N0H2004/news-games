@@ -4,6 +4,7 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\PhotoController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,7 @@ Route::resource("artikels", ArtikelController::class);
 Route::resource("tags", tagController::class);
 Route::resource("games", GameController::class);
 Route::resource("categories", CategorieController::class);
+Route::resource("photos", PhotoController::class);
 
 
 require __DIR__.'/auth.php';

@@ -17,7 +17,7 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('artikels.index')" :active="request()->routeIs('artikels.index')">
-                        {{ __('Artikelen') }}
+                        {{ __('Articles') }}
                     </x-nav-link>
 
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -45,6 +45,10 @@
 <br>
                                 <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
                                     {{ __('Categories') }}
+                                </x-nav-link>
+                                <br>
+                                <x-nav-link :href="route('photos.index')" :active="request()->routeIs('photos.index')">
+                                    {{ __('Photos') }}
                                 </x-nav-link>
 
                             </x-slot>

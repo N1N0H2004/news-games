@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-sans font-bold text-xl">
-            {{ __('Artikels') }}
+            {{ __('Articles') }}
         </h2>
     </x-slot>
 
@@ -17,21 +17,22 @@
                 @forelse($artikels as $artikel)
                     <div class=" p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                         <div class="justify-between items-center">
-{{--                        <img src="{{ asset($artikel->game->foto) }}" alt="" class="w-auto h-auto">--}}
-                            <img src={{ $artikel->game->foto }} alt="" class=" rounded-xl w-auto h-auto">
+                            <div class="relative">
+                                <img src="{{ $artikel->game->foto }}" alt="" class="rounded-xl w-96 h-96">
+                                <strong class="bg-gray-500 bg-opacity-70 pt-0.5 text-white rounded-b-xl absolute bottom-0 left-0 right-0 top-80 text-center"> {{ $artikel->titel }} </strong>
+                            </div>
 
-                            <strong class="my-4">Game naam: </strong>{{ $artikel->game->naam }}
 
 
 
-<br><br>
+                            <br><br>
                             <div class="flex w-52">
                                 <a href="{{ route('artikels.edit', $artikel->id)  }}" class="w-auto h-8 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Edit</a>
                                 <a href="{{ route('artikels.show', $artikel->id)  }}" class="w-auto h-8 ml-2 mr-2 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-orange-500 hover:border-orange-600 hover:bg-orange-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Show</a>
 
                                 <br>
                                 {{-- DELETE BUTTON --}}
-                                <button type="button" onclick="deleteOpenConfirmationPopup('{{ $artikel->id }}')" class="w-auto h-8 ml-2 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Delete</button>
+                                <button type="button" onclick="deleteOpenConfirmationPopup('{{ $artikel->id }}')" class="w-auto h-8 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Delete</button>
                             </div>
 
 
