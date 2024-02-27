@@ -38,19 +38,18 @@ class GameController extends Controller
             'tag_id' => 'required',
         ]);
 
-
-
+        $foto = "/images/" . $request->foto;
 
         Game::create([
             'naam' => $request->naam,
             'beschrijving' => $request->beschrijving,
-            'foto' => $request->foto,
+            'foto' => $foto,
             'tag_id' => $request->tag_id,
-
         ]);
 
         return redirect()->route('games.index')->with('success', 'game created successfully.');
     }
+
 
     public function destroy(Game $game)
     {
@@ -80,10 +79,12 @@ class GameController extends Controller
             'tag_id' => 'required',
         ]);
 
+        $foto = "/images/" . $request->foto;
+
         $game->update([
             'naam' => $request->naam,
             'beschrijving' => $request->beschrijving,
-            'foto' => $request->foto,
+            'foto' => $foto,
             'tag_id' => $request->tag_id,
         ]);
 

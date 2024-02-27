@@ -42,8 +42,6 @@ class ArtikelController extends Controller
         ]);
 
 
-
-
         Artikel::create([
             'titel' => $request->titel,
             'inhoud' => $request->inhoud,
@@ -52,16 +50,16 @@ class ArtikelController extends Controller
             'categorie_id' => $request->categorie_id,
         ]);
 
-        return redirect()->route('artikels.index')->with('success', 'Event created successfully.');
+        return redirect()->route('artikels.index')->with('success', 'Article created successfully.');
     }
 
     public function destroy(Artikel $artikel)
     {
         try {
             $artikel->delete();
-            return redirect()->route('artikels.index')->with('warning', 'News delete successfully!');
+            return redirect()->route('artikels.index')->with('warning', 'Article delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the news.');
+            return redirect()->back()->with('warning', 'An error occurred while deleting the article.');
         }
     }
 
@@ -92,7 +90,7 @@ class ArtikelController extends Controller
             'categorie_id' => $request->categorie_id,
         ]);
 
-        return redirect()->route('artikels.index')->with('success', 'Event created successfully.');
+        return redirect()->route('artikels.index')->with('info', 'Article created successfully.');
     }
 
     public function show(Artikel $artikel)

@@ -38,7 +38,7 @@ class TagController extends Controller
             'naam' => $request->naam,
         ]);
 
-        return redirect()->route('tags.index')->with('success', 'Event created successfully.');
+        return redirect()->route('tags.index')->with('success', 'Tag created successfully.');
     }
 
 
@@ -71,7 +71,7 @@ class TagController extends Controller
             'naam' => $request->naam,
         ]);
 
-        return redirect()->route('tags.index')->with('success', 'Event created successfully.');
+        return redirect()->route('tags.index')->with('info', 'Tag created successfully.');
     }
 
 }

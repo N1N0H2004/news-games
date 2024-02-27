@@ -11,11 +11,12 @@
                 <form action="{{ route('games.update', $game) }}" method="post">
                     @method('PUT')
                     @include('games.forum')
+                    <img src="{{ asset($game->foto) }}" alt="Current Picture" class="h-48">
+                    <strong class="my-4">Picture path: </strong>{{ $game->foto }} <br><br>
 
                     <button type="submit" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Edit games</button>
                     <a href="{{ route('games.index', $game->id)  }}" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Back</a>
                 </form>
-
             </div>
         </div>
     </div>
