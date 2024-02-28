@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-sans font-bold text-xl">
-            {{ __('Edit Tags') }} {{ $tag->naam }}
+            {{ __('Edit Device') }} {{ $tag->naam }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -12,7 +12,7 @@
                     @method('PUT')
                     @include('tags.forum')
 
-                    <button type="submit" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Edit tags</button>
+                    <button type="submit" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Edit Device</button>
                     <a href="{{ route('tags.index', $tag->id)  }}" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Back</a>
                 </form>
 

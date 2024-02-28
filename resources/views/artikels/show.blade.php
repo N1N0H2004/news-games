@@ -13,8 +13,8 @@
 {{--                    <img src={{ $artikel->game->foto }} alt="" class=" rounded-xl w-auto h-auto">--}}
 
                     <strong><h1> {{ $artikel->titel }} </h1></strong>
-                    <p>Geplaatst op {{ $artikel->created_at->format('d-F-Y H:i') }} </p>
-                    <p><strong class="mr-6">By .............. </strong> Geplaatst op {{ $artikel->created_at->format('d-F-Y H:i') }} </p>
+{{--                    <p>Placed on {{ $artikel->created_at->format('d-F-Y H:i') }} </p>--}}
+                    <p><strong class="mr-6">By .............. </strong> Placed on {{ $artikel->created_at->format('d-F-Y H:i') }} </p>
                     <br><br>
                     <p> {{ $artikel->inhoud }} </p>
 
@@ -26,9 +26,9 @@
                     <div x-data="{ open: false }">
 
                         <div x-show="open" x-cloak class="mb-5">
+                            <p><strong>Game: </strong> {{ $artikel->game->naam }} </p>
                             <p><strong>Device: </strong> {{ $artikel->tag->naam }} </p>
                             <p><strong>Categorie: </strong> {{ $artikel->categorie->naam }} </p>
-                            <p><strong>Game naam: </strong> {{ $artikel->game->naam }} </p>
                         </div>
 
                         <a href="{{ route('artikels.index', $artikel->id)  }}" class="w-auto bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Back</a>

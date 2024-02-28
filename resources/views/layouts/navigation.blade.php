@@ -36,7 +36,7 @@
 
                             <x-slot name="content">
                                 <x-nav-link :href="route('tags.index')" :active="request()->routeIs('tags.index')">
-                                    {{ __('Tags') }}
+                                    {{ __('Devices') }}
                                 </x-nav-link>
 <br>
                                 <x-nav-link :href="route('games.index')" :active="request()->routeIs('games.index')">
