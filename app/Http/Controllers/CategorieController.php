@@ -47,9 +47,9 @@ class CategorieController extends Controller
     {
         try {
             $categorie->delete();
-            return redirect()->route('categories.index')->with('warning', 'Categories delete successfully!');
+            return redirect()->route('categories.index')->with('warning', 'Categorie delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the categories.');
+            return redirect()->back()->with('warning', 'An error occurred while deleting the categorie.');
         }
     }
 

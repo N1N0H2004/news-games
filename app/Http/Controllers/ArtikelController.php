@@ -40,7 +40,8 @@ class ArtikelController extends Controller
             'inhoud' => 'required',
             'tag_id' => 'required',
             'game_id' => 'required',
-            'categorie_id' =>  'required',
+            'categorie_id' => 'required',
+            'photo_id' => 'required',
         ]);
 
 
@@ -50,6 +51,7 @@ class ArtikelController extends Controller
             'tag_id' => $request->tag_id,
             'game_id' => $request->game_id,
             'categorie_id' => $request->categorie_id,
+            'photo_id' => $request->photo_id,
         ]);
 
         return redirect()->route('artikels.index')->with('success', 'Article created successfully.');
@@ -70,8 +72,9 @@ class ArtikelController extends Controller
         $tags = Tag::all();
         $games = Game::all();
         $categories = Categorie::all();
+        $photos = Photo::all();
 
-        return view('artikels.edit', compact('artikel', 'tags', 'games', 'categories'));
+        return view('artikels.edit', compact('artikel', 'tags', 'games', 'categories', 'photos'));
     }
 
     public function update(Request $request, Artikel $artikel)
@@ -82,6 +85,7 @@ class ArtikelController extends Controller
             'tag_id' => 'required',
             'game_id' => 'required',
             'categorie_id' =>  'required',
+            'photo_id' =>  'required',
         ]);
 
         $artikel->update([
@@ -90,6 +94,7 @@ class ArtikelController extends Controller
             'tag_id' => $request->tag_id,
             'game_id' => $request->game_id,
             'categorie_id' => $request->categorie_id,
+            'photo_id' => $request->photo_id,
         ]);
 
         return redirect()->route('artikels.index')->with('info', 'Article created successfully.');

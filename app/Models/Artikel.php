@@ -17,6 +17,7 @@ class Artikel extends Model
         'tag_id',
         'categorie_id',
         'game_id',
+        'photo_id',
     ];
 
     // Relatie met Tag model

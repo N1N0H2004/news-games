@@ -87,7 +87,7 @@ class GameController extends Controller
             $game->delete();
             return redirect()->route('games.index')->with('warning', 'Game delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the news.');
+            return redirect()->back()->with('warning', 'An error occurred while deleting the game.');
         }
     }
 
