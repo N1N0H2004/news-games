@@ -5,7 +5,7 @@
     <p class="text-red-500 -mt-6">{{ $message }}</p>
     @enderror
 
-    <strong>Description: <textarea type="text" name="inhoud" field="inhoud" placeholder="Description..." class="w-full max-h-16 border-black" autocomplete="off">{{ $artikel->inhoud }}</textarea> </strong> <br> <br>
+    <strong>Description: <textarea type="text" name="inhoud" field="inhoud" placeholder="Description..." class="w-full min-h-44 max-h-80 border-black" autocomplete="off">{{ $artikel->inhoud }}</textarea> </strong> <br> <br>
 
     <strong>Device:
         <select name="tag_id" class="w-full rounded" autocomplete="off">

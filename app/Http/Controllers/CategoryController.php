@@ -45,13 +45,11 @@ class CategoryController extends Controller
 
     public function destroy(Category $categorie)
     {
-
         try {
             $categorie->delete();
-
             return redirect()->route('categories.index')->with('warning', 'Categorie delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the categorie.');
+            return redirect()->back()->with('alert', "This ". $categorie->name ." is still connected to something, that's why you can't delete it!");
         }
     }
 

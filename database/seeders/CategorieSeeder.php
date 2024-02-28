@@ -14,6 +14,11 @@ class CategorieSeeder extends Seeder
     public function run(): void
     {
         $categories = [
+            ['naam' => '---',
+            'created_at' => now(),
+            'updated_at' => now()
+            ],
+
             ['naam' => 'Review',
             'created_at' => now(),
             'updated_at' => now()
