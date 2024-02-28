@@ -21,7 +21,7 @@
                         foreach ($gekoppelde_artikelen as $artikel) {
                             echo "<strong>Article: </strong>{$artikel->titel} <br>";
                         }
-                        foreach ($gekoppelde_artikelen as $game) {
+                        foreach ($gekoppelde_games as $game) {
                             echo "<strong>Game: </strong>{$game->naam} <br>";
                         }
                     }
