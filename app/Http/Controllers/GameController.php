@@ -118,7 +118,7 @@ class GameController extends Controller
             'tag_id' => $request->tag_id,
         ]);
 
-        return redirect()->route('games.index')->with('success', 'Game created successfully.');
+        return redirect()->route('games.index')->with('success', 'Game edited successfully.');
     }
 
 

@@ -97,7 +97,7 @@ class ArtikelController extends Controller
             'photo_id' => $request->photo_id,
         ]);
 
-        return redirect()->route('artikels.index')->with('info', 'Article created successfully.');
+        return redirect()->route('artikels.index')->with('info', 'Article edited successfully.');
     }
 
     public function show(Artikel $artikel)

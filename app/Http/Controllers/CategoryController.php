@@ -71,7 +71,7 @@ class CategoryController extends Controller
             'naam' => $request->naam,
         ]);
 
-        return redirect()->route('categories.index')->with('success', 'Categorie created successfully.');
+        return redirect()->route('categories.index')->with('success', 'Categorie edited successfully.');
     }
 
 }
