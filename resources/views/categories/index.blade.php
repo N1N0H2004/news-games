@@ -20,9 +20,14 @@
                             <br><br>
                             <div class="w-52 flex">
                                 <a href="{{ route('categories.edit', $categorie->id)  }}" class="w-auto h-8 bg-white float-right text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">Edit</a>
+                                <?php $gekoppelde_artikelen = App\Models\Artikel::where('categorie_id', $categorie->id)->get(); ?>
 
-{{--                                @include('categories.confirmDelete')--}}
-                                @include('categories.cannotDelete')
+                                @if ($gekoppelde_artikelen->count() > 0)
+                                    @include('categories.cannotDelete')
+                                @else
+                                    @include('categories.confirmDelete')
+                                @endif
+
 
                             </div>
 
@@ -35,6 +40,7 @@
                     </div>
             </div>
         </div>
+    </div>
 </x-app-layout>
 
 @include('parsels.confirmation')

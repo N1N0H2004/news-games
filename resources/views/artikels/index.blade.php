@@ -74,5 +74,6 @@
             </div>
         </div>
     </div>
+</x-app-layout>
 
 @include('parsels.confirmation')

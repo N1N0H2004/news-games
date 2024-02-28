@@ -11,14 +11,30 @@
             <h2 class="text-xl font-bold py-4 ">Cannot delete this categorie!</h2>
             <p class="text-sm text-gray-500 px-8">This categorie is still connected to the following subjects, that's why you can't delete it!</p>
 
+            <div class="grid-cols-2">
+                <p class="text-sm text-gray-500 px-8">
+                    <?php
+                    $gekoppelde_artikelen = App\Models\Artikel::where('categorie_id', $categorie->id)->get();
+
+                    if ($gekoppelde_artikelen->count() > 0) {
+                        foreach ($gekoppelde_artikelen as $artikel) {
+                            echo "<strong>Article: </strong>{$artikel->titel} <br>";
+                        }
+                    } else {
+                        echo @include('categories.confirmDelete');
+                    }
+                    ?>
+                </p>
+            </div>
+
+
             <div class="p-3  mt-2 text-center space-x-4 md:block">
                 <button onclick="deleteCloseConfirmationPopup('{{ $categorie->id }}')" class="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-full hover:shadow-lg hover:bg-gray-100">Cancel</button>
 
                 <form id="deleteForm-{{ $categorie->id }}" method="POST" action="{{ route('categories.destroy', $categorie->id) }}" class="inline">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="mb-2 md:mb-0 bg-gray-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-red-blue">Delete</button>
-                </form>
+                    <button type="submit" class="mb-2 md:mb-0 bg-gray-500 border border-gray-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-gray-600">Delete</button>
             </div>
         </div>
     </div>
