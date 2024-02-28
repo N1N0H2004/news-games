@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 //use App\Http\Requests\StoreArtikelRequest;
 use App\Models\Artikel;
 use App\Models\Tag;
-use App\Models\Categorie;
+use App\Models\Category;
 use App\Models\Game;
 use App\Models\Photo;
 
@@ -26,7 +26,7 @@ class ArtikelController extends Controller
     {
         $tags = Tag::all();
         $games = Game::all();
-        $categories = Categorie::all();
+        $categories = Category::all();
         $photos = Photo::all();
 
         return view('artikels.create', compact('artikel', 'tags', 'games', 'categories', 'photos'));
@@ -71,7 +71,7 @@ class ArtikelController extends Controller
     {
         $tags = Tag::all();
         $games = Game::all();
-        $categories = Categorie::all();
+        $categories = Category::all();
         $photos = Photo::all();
 
         return view('artikels.edit', compact('artikel', 'tags', 'games', 'categories', 'photos'));

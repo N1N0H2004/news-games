@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 //use App\Http\Requests\StoreArtikelRequest;
 use App\Models\Artikel;
 use App\Models\Tag;
-use App\Models\Categorie;
+use App\Models\Category;
 use App\Models\Game;
 
 

@@ -29,7 +29,7 @@ class Artikel extends Model
     // Relatie met Categorie model
     public function categorie()
     {
-        return $this->belongsTo(Categorie::class);
+        return $this->belongsTo(Category::class);
     }
 
     // Relatie met Game model
