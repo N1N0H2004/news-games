@@ -49,7 +49,7 @@ class TagController extends Controller
             $tag->delete();
             return redirect()->route('tags.index')->with('warning', 'Tags delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the news.');
+            return redirect()->back()->with('alert', 'An error occurred while deleting the tag.');
         }
     }
 

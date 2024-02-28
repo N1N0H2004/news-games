@@ -49,7 +49,7 @@ class CategoryController extends Controller
             $categorie->delete();
             return redirect()->route('categories.index')->with('warning', 'Categorie delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('alert', "This ". $categorie->name ." is still connected to something, that's why you can't delete it!");
+            return redirect()->back()->with('alert', "This is still connected to something, that's why you can't delete it!");
         }
     }
 

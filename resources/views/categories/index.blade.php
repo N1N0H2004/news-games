@@ -31,9 +31,7 @@
 
                             </div>
 
-                            <div id="confirmationPopup-{{ $categorie->id }}" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center" style="display: none;">
-                                <!-- Confirmation Popup Content -->
-                            </div>
+                            <div id="confirmationPopup-{{ $categorie->id }}" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center" style="display: none;"></div>
                         </div>
                         @empty
                         @endforelse

@@ -45,7 +45,7 @@ class PhotoController extends Controller
             $photo->delete();
             return redirect()->route('photos.index')->with('warning', 'Photo delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the photos.');
+            return redirect()->back()->with('alert', 'An error occurred while deleting the photos.');
         }
     }
 }

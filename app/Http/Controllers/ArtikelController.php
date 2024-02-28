@@ -63,7 +63,7 @@ class ArtikelController extends Controller
             $artikel->delete();
             return redirect()->route('artikels.index')->with('warning', 'Article delete successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('warning', 'An error occurred while deleting the article.');
+            return redirect()->back()->with('alert', 'An error occurred while deleting the article.');
         }
     }
 
