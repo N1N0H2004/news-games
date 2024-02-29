@@ -32,9 +32,15 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Verwijder de 'auth' middleware uit deze route
+Route::get('/artikel', function () {
+//    return view('dashboard');
+    $artikels = \App\Models\Artikel::all()->sortBy('created_at');
+    return view('artikel', ['artikels' => $artikels]);
+})->name('artikel');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
