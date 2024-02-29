@@ -20,6 +20,9 @@
 
 
                     @auth <!-- Controleren of de gebruiker is ingelogd -->
+{{--                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">--}}
+{{--                        {{ __('Dashboard') }}--}}
+{{--                    </x-nav-link>--}}
                     <x-nav-link :href="route('artikels.index')" :active="request()->routeIs('artikels.index')">
                         {{ __('Articles') }}
                     </x-nav-link>

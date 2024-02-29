@@ -31,12 +31,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-// Verwijder de 'auth' middleware uit deze route
-Route::get('/artikel', function () {
-//    return view('dashboard');
-    $artikels = \App\Models\Artikel::all()->sortBy('created_at');
-    return view('artikel', ['artikels' => $artikels]);
-})->name('artikel');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -54,6 +48,19 @@ Route::resource("tags", tagController::class);
 Route::resource("games", GameController::class);
 Route::resource("categories", CategoryController::class);
 Route::resource("photos", PhotoController::class);
+
+//News articles Routes
+Route::get('/artikel', function () {
+    $artikels = \App\Models\Artikel::all()->sortBy('created_at');
+    return view('artikel', ['artikels' => $artikels]);
+})->name('artikel');
+
+Route::get('/artikel/{id}', function ($id) {
+    $artikel = \App\Models\Artikel::findOrFail($id);
+    return view('artikelShow', ['artikel' => $artikel]);
+})->name('artikelShow');
+
+
 
 
 require __DIR__.'/auth.php';
