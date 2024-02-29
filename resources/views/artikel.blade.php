@@ -12,10 +12,10 @@
 
             <div class="grid grid-cols-3 gap-6">
                 @forelse($artikels as $artikel)
-                    <div class=" bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
-                        <div class="justify-between items-center">
+                    <div class="">
+                        <div class="justify-between items-center h-96">
                             <a href="{{ route('artikelShow', $artikel->id)  }}" class="relative inline-block overflow-hidden">
-                                <img src="{{ $artikel->game->foto }}" alt="" class="rounded-xl w-auto h-auto transition-transform duration-300 transform hover:scale-105">
+                                <img src="{{ $artikel->game->foto }}" alt="" class=" w-96 h-96 rounded-xl transition-transform duration-300 transform hover:scale-105">
                                 <strong class="bg-gray-500 bg-opacity-60 pt-0.5 pl-1 pr-1 rounded-b-xl absolute bottom-0 left-0 right-0 top-80 hover:underline text-center text-white text-xl"> {{ $artikel->titel }} </strong>
                             </a>
                         </div>

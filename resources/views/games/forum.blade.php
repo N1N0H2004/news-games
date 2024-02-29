@@ -15,5 +15,6 @@
             @endforeach
             </select>
 <br><br>
-        <strong>Picture: </strong><x-text-input type="file" name="foto" field="foto" class="w-full" style="background-color: white; color: black;" required >{{ $game->foto }}</x-text-input>
-<br><br>
+        <strong>Picture: </strong><br><x-text-input type="file" name="foto" field="foto" class="" style="background-color: white; color: black;" required >{{ $game->foto }}</x-text-input>
+
+        <br><br>

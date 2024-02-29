@@ -20,21 +20,22 @@
                 @if (Route::has('login'))
                     <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                         @auth
-                            <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">News articles</a>
+                            <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:underline">News articles</a>
                         @else
-                            <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                            <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:underline">Log in</a>
 
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:underline">Register</a>
                             @endif
                         @endauth
-                        <a href="{{ url('/artikel') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">News articles</a>
                     </div>
                 @endif
 
                 <div class="max-w-7xl mx-auto p-6 lg:p-8" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                     <div style="color: white; font-size: 48px; font-weight: bold; text-align: center;">
                         <h1>News - Games</h1>
+                        <a href="{{ url('/artikel') }}" class="mly font-semibold text-gray-600 hover:text-red-900 dark:text-gray-400 dark:hover:text-white  hover:underline">News articles</a>
+
                     </div>
 
                     <svg xmlns="http://www.w3.org/2000/svg" height="128" width="128" viewBox="0 0 640 512" style="margin-top: 20px;">

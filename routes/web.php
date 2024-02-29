@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PhotoController;
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,9 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', function () {
+    if (auth()->check()) {
+        Auth::logout();
+    }
     return view('welcome');
 })->name('welcome');
 
