@@ -19,14 +19,23 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Route::get('/dash', function () {
+//    return redirect()->to('/news');
+//});
+//
+//Route::get('/news', function () {
+//    return view('news');
+//});
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
+// Verwijder de 'auth' middleware uit deze route
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
