@@ -28,7 +28,7 @@ class ArtikelSeeder extends Seeder
             ],
 
             [
-                'titel' => 'Call Of Duty announced his new game | Modern Warfare|V',
+                'titel' => 'Call Of Duty announced his new game | Modern Warfare V',
                 'inhoud' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu erat sit amet urna lobortis elementum. Nam cursus, est nec fermentum rutrum, nunc arcu congue mi, quis elementum dolor justo eget ante. Suspendisse potenti. Maecenas vitae viverra mi. Aenean euismod, lectus in faucibus mattis, erat turpis mattis urna, at mollis ante massa at dolor. Morbi mattis bibendum odio quis viverra. Aliquam dignissim sem molestie augue condimentum lacinia. Mauris sed hendrerit felis. Ut laoreet est rhoncus mauris bibendum interdum.
 
                              Aenean dictum at nunc pharetra dictum. Mauris non consequat nunc. Cras odio urna, auctor semper ullamcorper ut, consectetur et lectus. Maecenas facilisis tortor id lectus hendrerit accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In finibus vehicula quam non rhoncus. In nec volutpat sapien. Vivamus lectus libero, efficitur vel tempus vitae, facilisis ut risus. Fusce nunc justo, iaculis in sodales ut, dapibus nec nibh.

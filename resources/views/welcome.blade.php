@@ -31,17 +31,17 @@
                     </div>
                 @endif
 
-                <div class="max-w-7xl mx-auto p-6 lg:p-8" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                    <div style="color: white; font-size: 48px; font-weight: bold; text-align: center;">
-                        <h1>News - Games</h1>
-                        <a href="{{ url('/artikel') }}" class="mly font-semibold text-gray-600 hover:text-red-900 dark:text-gray-400 dark:hover:text-white  hover:underline">News articles</a>
-
+                    <div class="max-w-7xl mx-auto p-6 lg:p-8" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <div style="color: white; font-size: 48px; font-weight: bold; text-align: center;">
+                            <h1 class="" style="text-shadow: 4px 4px red;">News - Games</h1>
+                            <a href="{{ url('/artikel') }}" class="mly font-semibold text-gray-600 hover:text-red-900 dark:text-gray-400 dark:hover:text-white hover:line-through">News articles</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="128" width="128" viewBox="0 0 640 512" style="margin-top: 20px;">
+                            <path fill="#ff0000" d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/>
+                        </svg>
                     </div>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" height="128" width="128" viewBox="0 0 640 512" style="margin-top: 20px;">
-                        <path fill="#ff0000" d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/>
-                    </svg>
-                </div>
-        </div>
+
+            </div>
     </body>
 </html>
