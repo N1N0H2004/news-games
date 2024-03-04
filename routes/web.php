@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Apiv2Controller;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\GameController;
@@ -52,6 +53,9 @@ Route::resource("tags", tagController::class);
 Route::resource("games", GameController::class);
 Route::resource("categories", CategoryController::class);
 Route::resource("photos", PhotoController::class);
+Route::resource("apis", Apiv2Controller::class);
+Route::resource("apiv2s", Apiv2Controller::class);
+
 
 //News articles Routes
 Route::get('/artikel', function () {

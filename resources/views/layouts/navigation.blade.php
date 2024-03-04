@@ -64,6 +64,15 @@
                                 <x-nav-link :href="route('photos.index')" :active="request()->routeIs('photos.index')">
                                     {{ __('Photos') }}
                                 </x-nav-link>
+                                <br>
+                                <x-nav-link :href="route('apis.index')" :active="request()->routeIs('apis.index')">
+                                    {{ __('Api') }}
+                                </x-nav-link>
+                                <br>
+                                <x-nav-link :href="route('apiv2s.index')" :active="request()->routeIs('apiv2s.index')">
+                                    {{ __('Api v2') }}
+                                </x-nav-link>
+
 
                             </x-slot>
                         </x-dropdown>
