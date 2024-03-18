@@ -89,8 +89,66 @@
         icons.play();
     </script>
 
+    {{------------------------------------------}}
+    {{------------------------------------------}}
+    {{------------------------------------------}}
 
-<br><br><br><br><br><br><br><br>
+
+    <div style='padding-top: 30px; display: flex; padding-left: 100px;'>
+        <div style='background-color: #6B7280; border-radius: 0.75rem; width: 680px; height: 300px; border-color: #000000; border-width: 4px; display: flex;'>
+            <div style='flex: 2; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-left: 10px; padding-right: 6px;'>
+                <strong style='font-size: 36px;'>VrijdagMiddagBorrel </strong>
+                <div id="timer" style='font-size: 24px; font-weight: 600;'> </div>
+                <canvas id="weather" width="148" height="96" style='margin-top: 8px; margin-bottom: 8px;'></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Functie om de timer bij te werken
+        function updateTimer() {
+            // Doel datum en tijd instellen (Vrijdagmiddag 16:30)
+            var targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + (5 - targetDate.getDay())); // Vrijdag
+            targetDate.setHours(16, 30, 00, 00); //16:30
+
+            // Huidige datum en tijd krijgen
+            var currentDate = new Date();
+
+            // Tijdverschil berekenen tussen doel en huidige tijd
+            var difference = targetDate.getTime() - currentDate.getTime();
+
+            // Als het verschil negatief is, de timer is afgelopen
+            if (difference <= 0) {
+                document.getElementById("timer").innerHTML = "VrijdagMiddagBorrel is aan de gang!";
+                // Timer opnieuw starten na een half uur
+                setTimeout(function() {
+                    updateTimer(); // Timer opnieuw starten
+                }, 30 * 60 * 1000); // 30 minuten in milliseconden
+            } else {
+                // Tijd in milliseconden omzetten naar dagen, uren, minuten en seconden
+                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                difference %= (1000 * 60 * 60 * 24);
+                var hours = Math.floor(difference / (1000 * 60 * 60));
+                difference %= (1000 * 60 * 60);
+                var minutes = Math.floor(difference / (1000 * 60));
+                difference %= (1000 * 60);
+                var seconds = Math.floor(difference / 1000);
+
+                // Timerweergave bijwerken
+                document.getElementById("timer").innerHTML = days + " dagen " + hours + " uur " + minutes + " minuten " + seconds + " seconden ";
+            }
+        }
+
+        // Eerste keer de timer bijwerken
+        updateTimer();
+
+        // Timer bijwerken elke seconde
+        setInterval(updateTimer, 1000);
+    </script>
+
+    <br><br><br><br><br><br><br><br>
+
 
     <?php
     $Array = array("Bench", "Sqaut", "Deadlift");

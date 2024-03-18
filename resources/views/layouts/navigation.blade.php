@@ -69,8 +69,8 @@
                                     {{ __('Api') }}
                                 </x-nav-link>
                                 <br>
-                                <x-nav-link :href="route('apiv2s.index')" :active="request()->routeIs('apiv2s.index')">
-                                    {{ __('Api v2') }}
+                                <x-nav-link :href="route('responses.index')" :active="request()->routeIs('responses.index')">
+                                    {{ __('Api response') }}
                                 </x-nav-link>
 
 

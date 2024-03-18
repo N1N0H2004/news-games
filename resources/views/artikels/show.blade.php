@@ -16,7 +16,8 @@
 {{--                    <p>Placed on {{ $artikel->created_at->format('d-F-Y H:i') }} </p>--}}
                     <p><strong class="mr-6">By .............. </strong> Placed on {{ $artikel->created_at->format('d-F-Y H:i') }} </p>
                     <br><br>
-                    <p> {{ $artikel->inhoud }} </p>
+                    <p> {!! $artikel->inhoud !!} </p>
+{{--                    <p> {{ $artikel->inhoud }} </p>--}}
 
 
                     <br><br><br><br><br>
