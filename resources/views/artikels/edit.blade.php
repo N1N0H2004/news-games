@@ -39,6 +39,7 @@
     window.onload = function() {
         Laraberg.init('inhoud');
     }
+
 </script>
 </body>
 </html>

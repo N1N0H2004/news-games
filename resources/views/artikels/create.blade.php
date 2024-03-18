@@ -15,6 +15,7 @@
 
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
     <script src="{{ asset('vendor/laraberg/js/laraberg.js') }}"></script>
+
     <!-- Vite Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -36,7 +37,28 @@
 <script>
     window.onload = function() {
         Laraberg.init('inhoud');
+
+        const myBlock =  {
+            title: 'Hoi jeffrey!',
+            icon: 'universal-access-alt',
+            category: 'text',
+
+            edit() {
+                return " <h1>Hello editor.</h1>"
+            },
+
+            save() {
+                return `
+                    {!! view('blocks.jeffrey')->render() !!}
+                `;
+            }
+        }
+
+        Laraberg.registerBlockType('accent/jeffrey', myBlock)
     }
+
+
+
 </script>
 </body>
 </html>
