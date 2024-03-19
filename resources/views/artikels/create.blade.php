@@ -39,12 +39,15 @@
         Laraberg.init('inhoud');
 
         const myBlock =  {
-            title: 'Hoi jeffrey!',
-            icon: 'universal-access-alt',
+            title: 'jeffreys superawesome downloadbutton!',
+            icon: 'smiley',
             category: 'text',
+            Author: 'Ninoh van Dijke',
 
             edit() {
-                return " <h1>Hello editor.</h1>"
+                return `
+                    {!! view('blocks.jeffrey')->render() !!}
+                `;
             },
 
             save() {
@@ -57,9 +60,8 @@
         Laraberg.registerBlockType('accent/jeffrey', myBlock)
     }
 
-
-
 </script>
+
 </body>
 </html>
 

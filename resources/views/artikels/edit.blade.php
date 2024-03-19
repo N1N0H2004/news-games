@@ -38,6 +38,27 @@
 <script>
     window.onload = function() {
         Laraberg.init('inhoud');
+
+        const myBlock =  {
+            title: 'Jeffrey!',
+            icon: 'smiley',
+            category: 'text',
+
+
+            edit() {
+                return `
+                    {!! view('blocks.jeffrey')->render() !!}
+                `;
+            },
+
+            save() {
+                return `
+                    {!! view('blocks.jeffrey')->render() !!}
+                `;
+            }
+        }
+
+        Laraberg.registerBlockType('accent/jeffrey', myBlock)
     }
 
 </script>
